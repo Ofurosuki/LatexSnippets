@@ -1,0 +1,152 @@
+{
+    "report": {
+        "prefix": "report",
+        "body": [
+            "\\documentclass[${1:a4paper,11pt}]{${2:jsarticle}}",
+            "\\renewcommand{\\figurename}{Fig.}",
+            "\\renewcommand{\\tablename}{Table.}",
+            "",
+            "",
+            "% 数式",
+            "\\usepackage{amsmath,amsfonts}",
+            "\\usepackage{bm}",
+            "\\usepackage{siunitx}",
+            "\\usepackage{color}",
+            "% 画像",
+            "\\usepackage{color}",
+            "\\usepackage[dvipdfmx]{graphicx}",
+            "\\usepackage{float}",
+            "\\usepackage{subcaption}",
+            "${3}",
+            "",
+            "\\begin{document}",
+            "\\section{目的}",
+            "\\section{実験原理}",
+            "\\section{実験方法}",
+            "\\section{実験結果}",
+            "\\section{考察}",
+            "\\section{結論}",
+            "\\section*{参考文献}",
+            "\\section{課題}",
+            "",
+            "$0",
+            "",
+            "",
+            "\\end{document}"
+        ],
+        "description": "授業レポート用テンプレート"
+    },
+    "shiki": {
+        "prefix": "shiki",
+        "body": [
+            "\\begin{align}",
+            "\\label{$2}",
+            "$1",
+            "\\end{align}"
+        ],
+        "description": "\\begin{align}のショートカット"
+    },
+    "table": {
+        "prefix": "table",
+        "body": [
+            "",
+            "\\begin{table}[H]",
+            "\\caption{$1}",
+            "\\label{}",
+            "\\centering",
+            "\\begin{tabular}{cccc}",
+            "\\hline",
+            "a&b&c&d\\\\\\",
+            "\\hline\\hline",
+            "e&f&g&h\\\\\\",
+            "\\hline",
+            "\\end{tabular}",
+            "\\end{table}",
+            ""
+        ]
+    },
+    "figure": {
+        "prefix": "figure",
+        "body": [
+            "",
+            "\\begin{figure}[H]",
+            "\\centering",
+            "\\includegraphics[width=8cm]{$1}",
+            "\\caption{$2}",
+            "\\end{figure}",
+            ""
+        ]
+    },
+    "figureX2":{
+        "prefix": "ffigure",
+        "body": [
+            "\\begin{figure}[H]",
+            "\\begin{minipage}[b]{0.5\\columnwidth}",
+            "\\centering",
+            "\\includegraphics[width=\\columnwidth]{$1}",
+            "\\subcaption{Left}",
+            "\\end{minipage}",
+            "\\hspace{0.04\\columnwidth} % ここで隙間作成",
+            "\\begin{minipage}[b]{0.5\\columnwidth}",
+            "\\centering",
+            "\\includegraphics[width=\\columnwidth]{$2}",
+            "\\subcaption{Right}",
+            "\\end{minipage}",
+            "\\caption{exp}",
+            "\\label{}",
+            "\\end{figure}",
+            ""
+        ]
+    },
+    "space": {
+        "prefix": "space",
+        "body": [
+            "\\,$1"
+        ]
+    },
+    "si": {
+        "prefix": "si",
+        "body": [
+            "\\SI{$1}{$2}"
+        ]
+    },
+    "do": {
+        "prefix": "do",
+        "body": [
+            "${$1}^\\circ$"
+        ]
+    },
+    "red": {
+        "prefix": "red",
+        "body": [
+            "\\color{red}$1\\color{black}"
+        ]
+    },
+    "code": {
+        "prefix": "code",
+        "body": [
+            "\\begin{lstlisting}[caption=$1, label=$2]",
+            "$3",
+            "\\end{lstlisting}"
+        ]
+    },
+    "subsubsection": {
+        "prefix": "sssection",
+        "body": [
+            "\\subsubsection{$1}",
+        ]
+    },
+    "ref": {
+        "prefix": "ref",
+        "body": [
+            "図\\ref{$1}",
+        ]
+    },
+    "test": {
+        "prefix": "test",
+        "body": [
+            "",
+            "test",
+        ]
+    },
+}
